@@ -115,10 +115,10 @@ def normalize_supplier_data(step1_df, customer_df, customer_col_names):
     # in the supplier dataset have to be manipulated to match the format and the
     # information conveyed.
     print("\n")
-    print("Step 2 - Normalisation: Get the same data representation of the target.")
+    print("Step 2 - Normalization: Get the same data representation of the target.")
 
-    # Start with the type column as the carType contains useful information
-    # which will be lost in the next steps.
+    # I start with the column labeled type as the carType column contains useful
+    # information which will be lost in the next steps.
 
     # 15) type: Given that the customer is most probably selling only cars (the
     # target dataset contains only cars) I tag with 'Other' what is not a car
@@ -250,7 +250,6 @@ def normalize_supplier_data(step1_df, customer_df, customer_col_names):
 
     # I set in upper case all car make whose name is less than 4 chars
     # (with only few exceptions, see below).
-    # mask = step1_df['MakeText'].str.len() == 3
     step1_df['MakeText'] = step1_df['MakeText'].apply(
         lambda x: x.upper() if len(x) < 4 else x)
 
