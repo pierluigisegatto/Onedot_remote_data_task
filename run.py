@@ -29,7 +29,7 @@ def main():
 
     normalized_data : pandas.DataFrame
         Formatted df containing all normalized attributes provided by the supplier
-        along with the missing columns from the customer dataset. Data are
+        along with the missing columns of the customer dataset. Data are
         normalized to match the same style and degree of information required by
         the customer.
 

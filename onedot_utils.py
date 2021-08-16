@@ -2,7 +2,7 @@
 # -----------------------------------------------------------
 # this script contains a serires of functions useful for the implementation of
 # the Onedot data analyst test.
-# There are functions for reading, manipulating, and analysisng, and saving
+# There are functions for reading, manipulating, analysing, and saving
 # the given supplier dataset.
 #
 # (C) 2021 Segatto Pier Luigi, Lausanne, Switzerland
@@ -130,10 +130,10 @@ def normalize_supplier_data(step1_df, customer_df, customer_col_names):
                  'Sattelschlepper', 'type'] = 'Other'
 
     # 1) carType: corresponds to BodyTypeText in the input dataset.
-    # As a firt step, I decide to associate to the supplier BodyTypes the closest
+    # As a first step, I decide to associate to the supplier BodyTypes the closest
     # carType that is present in the customer dataset. If a BodyType does not fit
     # to any carType category it goes to Other. The only NaN value in the supplier
-    # dataset pertains to an Harley-Davidson (a bike), hece it is set to Other.
+    # dataset pertains to an Harley-Davidson (a bike), hence it is set to Other.
 
     # NOTE: I would discuss with the customer the possibilitiy of enlarging the
     # carType dictionary to provide the final user more info about the given car.
@@ -333,7 +333,7 @@ def normalize_supplier_data(step1_df, customer_df, customer_col_names):
 def integrate_supplier_data(step2_df, customer_df, customer_col_names):
     """
     Function that accepts as input the normalized supplier dataframe, filters
-    only the columns that are required by the customer, and vertically stack
+    only the columns that are required by the customer, and vertically stacks
     the customer (on top) and supplier databases.
 
     Parameters
